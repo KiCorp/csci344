@@ -1,0 +1,48 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*kiko's code below */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border: solid 1px #000;
+    margin: 20px;
+
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10px;
+    border: solid 1px #000;
+
+}
+h1 {
+    padding: 10px;
+    margin-right: 70vw;
+    border: solid 1px #000;
+}
+li {
+    padding: 10px;
+    margin: 10px;
+    border: solid 1px #000;
+}
+
+
+
+
+

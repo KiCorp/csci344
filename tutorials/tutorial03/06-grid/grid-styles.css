@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: pink;
+}
+
+.grid-container {
+    height: 100vh;
+    /* you will add addition rules for the container here  */
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+}
+
+/* create your child rules here:  */
+.item-1 {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.item-2 {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.item-3 {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.item-4 {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.item-5 {
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}

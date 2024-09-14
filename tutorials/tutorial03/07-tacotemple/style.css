@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 1.75vw;
+}
+
+p {
+    color: gray;
+    font-size: 1.25vw;
+}
+span {
+    color: gray;
+    font-size: 1.25vw;
+}
+
+img {
+    width: 12vw;
+    height: 12vw;
+    padding: .75vw;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    justify-items: center;
+}
+
+.card {
+    width: 45vw;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: 1px;
+    margin: 3vw;
+    padding: 1vw;
+    display: grid;
+    grid-template-columns: 32vw 15vw;
+}
