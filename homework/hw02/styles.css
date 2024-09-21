@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #F4F4F4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Begin Debugging Code */
+header,
+main,
+section,
+article,
+nav,
+.logo {
+    border: solid 0px #CCC;
+    /*padding: 10px;
+    margin: 10px;*/
+}
+
+.logo {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+aside,
+body>header,
+main,
+.news-feed {
+    /*border: solid 4px #000;*/
+    padding: 10px;
+    margin: 10px;
+}
+
+/* End Debugging Code */
+
+
+article {
+    min-height: 300px;
+}
+
+#top-header {
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+aside {
+    margin: 0;
+    margin-left: 0vw;
+    top: 120px;
+    right: 1vw;
+    background-color: transparent;
+    position: fixed;
+    width: 33vw;
+}
+
+main {
+    margin-top: 120px;
+    width: 55vw;
+    margin-left: 10vw;
+}
+
+article {
+    border: solid 2px #CCC;
+    background-color: white;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw;
+    /*border: solid 2px red;*/
+    padding-top: 0;
+    padding-bottom: auto;
+    padding-right: 0;
+}
+.top #threeDots {
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+    background-color: white;
+    border: solid 0px red;
+    font-size: 24px;
+}
+
+.image img {
+    margin: auto;
+    width: 100%;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1vw;
+    padding-top: 0;
+    padding-bottom: auto;
+    padding-right: 0;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+.icons #heart, .icons #buble,.icons #pplane, .icons #save {
+    background-color: white;
+    border: solid 0px red;
+    font-size: 24px;
+}
+.icons #save {
+    display: flex;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.likes {
+    padding: 1vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+.comments {
+    padding: 1vw;
+    padding-top: 0;
+    padding-bottom: auto;
+    padding-right: 0;
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+.caption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.caption button {
+    background-color: white;
+    border: solid 0px red;
+    color: blue;
+    font-size: 1em;
+}
+#days {
+    color: gray;
+}
+
+.comment {
+    padding: 1vw;
+    padding-top: 5px;
+    padding-bottom: auto;
+    padding-right: 0;
+    margin-top: 2%;
+    margin-bottom: 0;
+    outline: solid 2px #CCC;
+}
+.comment  #smile, .comment  #commentBox, .comment  #post{
+    font-size: 24px;
+    background-color: white;
+    border: solid 0px red;
+}
+.comment #commentBox {
+    width: 70%;
+}
+.comment #post {
+    padding: 0;
+    margin-right: 15px;
+    margin-left: auto;
+    color: blue;
+    float: right;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: comfortaa;
+}
+
+.logo {
+    font-size: 32px;
+}
+.navi button{
+    background-color: white;
+    border: solid 0px red;
+    font-size: 16px;
+}
+.navi #signOut {
+    color: blue;
+}
+
+main {
+    padding: 0;
+}
+
+article {
+    margin-bottom: 10px;
+}
+
+aside {
+    margin-left: 10px;
+}
+aside p {
+    margin-left: 20px;
+}
+aside .suggestions {
+    margin-left: 20px;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+}
+.profile img {
+    width: 30%;
+    clip-path: circle();
+}
+.profile h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.suggestions img {
+    width: 10%;
+    clip-path: circle();
+}
+.suggestions {
+    display: flex;
+    flex-direction: row;
+}
+.sugestedPFP {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 10px;
+    border: solid 0px red;
+    font-size: 20px;
+}
+.sugestedPFP p {
+    padding: 0;
+    margin: 0;
+}
+.sugGray {
+    color: gray;
+    font-size: 18px;
+}
+.suggestions button {
+    background-color: transparent;
+    border: solid 0px red;
+    font-size: 18px;
+    color: blue;
+}
+#suggestionsforyou {
+    font-size: 24pt;
+    color: gray;
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 180px;
+    margin-bottom: 10px;
+}
+.storycard {
+    margin: 12px;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+}
+.storycard img {
+    width: 90%;
+    clip-path: circle();
+}
+.storycard p {
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 800px) {
+
+    aside {
+        display: none;
+    }
+
+    main {
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 20px;
+    }
+
+}
