@@ -23,7 +23,7 @@ function showNav() {
             <h1 class="font-Comfortaa font-bold text-2xl">Photo App</h1>
             <ul class="flex gap-4 text-sm items-center justify-center">
                 <li><span>${username}</span></li>
-                <li><button class="text-blue-700 py-2">Sign out</button></li>
+                <li><button aria-label="sign out" class="text-blue-700 py-2">Sign out</button></li>
             </ul>
         </nav>
     `;
@@ -88,7 +88,7 @@ function showSuggestions(data) {
                     <p class="font-bold text-sm">${data.username}</p>
                     <p class=" text-blue-950 text-xs">suggested for you</p>
                 </div>
-                <button class=" text-blue-950 text-sm py-2">follow</button>
+                <button aria-label="follow account" class=" text-blue-950 text-sm py-2">follow</button>
             </section>
         `
         asideEl.insertAdjacentHTML("beforeend", template);
@@ -147,7 +147,7 @@ function showPosts(posts) {
             <section class="bg-white border mb-10">
                 <div class="p-4 flex justify-between">
                     <h3 class="text-lg font-Comfortaa font-bold">${post.user.username}</h3>
-                    <button class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
+                    <button aria-label="post info" class="icon-button"><i class="fas fa-ellipsis-h"></i></button>
                 </div>
                 <img src="${post.image_url}" alt="${post.alt_text}" width="300" height="300"
                     class="w-full bg-cover">
@@ -155,8 +155,8 @@ function showPosts(posts) {
                     <div class="flex justify-between text-2xl mb-3">
                         <div>
                             ${getLikeButton(post)}
-                            <button><i class="far fa-comment"></i></button>
-                            <button><i class="far fa-paper-plane"></i></button>
+                            <button aria-label="view comments"><i class="far fa-comment"></i></button>
+                            <button aria-label="share"><i class="far fa-paper-plane"></i></button>
                         </div>
                         <div>
                             ${getBookmarkButton(post)}
@@ -177,7 +177,7 @@ function showPosts(posts) {
                         <i class="far fa-smile text-lg"></i>
                         <input type="text" class="min-w-[80%] focus:outline-none" placeholder="Add a comment...">
                     </div>
-                    <button class=" text-blue-950 py-2">Post</button>
+                    <button aria-label="add post" class=" text-blue-950 py-2">Post</button>
                 </div>
             </section>
         `
@@ -189,7 +189,7 @@ function showComments (comments) {
     if(comments.length > 1) {
         const lastComment = comments[comments.length-1];
         return `
-            <button>view all ${comments.length} comments</button>
+            <button aria-label="look at comments">view all ${comments.length} comments</button>
             <p class="text-sm mb-3"><strong>${lastComment.user.username}</strong> ${lastComment.text}</p>
         `;
     }
@@ -204,9 +204,9 @@ function showComments (comments) {
 
 function getLikeButton (post) {
     if (post.current_user_like_id) {
-        return `<button onclick="deleteLike(${post.current_user_like_id})"><i class="fa-solid text-red-700 fa-heart"></i></button>`;
+        return `<button aria-label="unlike" onclick="deleteLike(${post.current_user_like_id})"><i class="fa-solid text-red-700 fa-heart"></i></button>`;
     } else {
-        return  `<button onclick="createLike(${post.id})"><i class="far fa-heart"></i></button>`;
+        return  `<button aria-label="like" onclick="createLike(${post.id})"><i class="far fa-heart"></i></button>`;
     }
 }
 
@@ -243,9 +243,9 @@ window.deleteLike = async function (likeId) {
 
 function getBookmarkButton (post) {
     if (post.current_user_bookmark_id) {
-        return `<button onclick="deleteBookmark(${post.current_user_bookmark_id})"><i class="fa-solid fa-bookmark"></i></button>`;
+        return `<button aria-label="unmark" onclick="deleteBookmark(${post.current_user_bookmark_id})"><i class="fa-solid fa-bookmark"></i></button>`;
     } else {
-        return  `<button onclick="createBookmark(${post.id})"><i class="far fa-bookmark"></i></button>`;
+        return  `<button aria-label="mark" onclick="createBookmark(${post.id})"><i class="far fa-bookmark"></i></button>`;
     }
 }
 
