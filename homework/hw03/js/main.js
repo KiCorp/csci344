@@ -175,7 +175,8 @@ function showPosts(posts) {
                 <div class="flex justify-between items-center p-3">
                     <div class="flex items-center gap-3 min-w-[80%]">
                         <i class="far fa-smile text-lg"></i>
-                        <input type="text" class="min-w-[80%] focus:outline-none" placeholder="Add a comment...">
+                        <label for="${post.id}">Comment: </label>
+                        <input type="text" class="min-w-[80%] focus:outline-none" placeholder="Add a comment..." id="${post.id}" >
                     </div>
                     <button aria-label="add post" class=" text-blue-950 py-2">Post</button>
                 </div>
