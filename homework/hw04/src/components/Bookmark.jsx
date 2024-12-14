@@ -24,13 +24,13 @@ export default function Bookmark({ bookmarkId, postId, token }) {
 
     if (bookMarkId) {
         return (
-            <button ariachecked="true" arialabel="Bookmark This Post" ariarole="toggle" onClick={deleteBookMark}>
+            <button ariachecked="true" aria-label="Bookmark This Post" aria-role="toggle" onClick={deleteBookMark}>
                 <i className="fas fa-bookmark">
             </i></button>
         )
     } else {
         return (
-            <button ariaChecked="false" ariaLabel="Unbookmark This Post" ariaRole="toggle" onClick={createBookMark}>
+            <button ariaChecked="false" aria-label="Unbookmark This Post" aria-role="toggle" onClick={createBookMark}>
                 <i className="far fa-bookmark">
             </i></button>
         )
